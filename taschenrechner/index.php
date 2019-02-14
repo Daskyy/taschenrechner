@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -9,7 +10,6 @@
     <link rel="stylesheet" href="format.css">
     <link rel="stylesheet" href="design/animate.css">
     <title>Raschentechner</title>
-
     
 </head>
 <body style="background-color: rgb(36, 41, 46);" class="center">
@@ -26,12 +26,12 @@
     <script src="design/bootstrap-notify.js"></script>
 
 
-<form name="rechner" id="rechner" method="post">
+    <form name="rechner" id="rechner" method="post">
 
-<div class="container border">
+    <div class="container border">
+
         <div class="row">
             <div class="divhistory" id="divhistory">     
-                <table>
                     <?php foreach($history as $historyEntry) { ?>
                         <div class="row">
                             <div class="col-5"><input type="text" class="history-display focus" onClick="clearDisplay(); updateDisplay(this.value)" value="<?php echo $historyEntry['rechnung']; ?>" readonly></div>
@@ -39,57 +39,62 @@
                             <div class="col-4"><input type="text" class="history-display focus" onClick="clearDisplay(); updateDisplay(this.value)" value="<?php echo $historyEntry['ergebnis']; ?>" readonly></div>
                         </div>
                     <?php } ?>                    
-                </table>           
             </div>  
         </div>
-    <div class="row">
-        <div class="divdisplay" id="divdisplay">
-            <input type="text" class="calc-display" value="<?php echo $ergebnis ?>" name="display" id="display" readonly>
-        </div> 
-    </div>
-    <div class="row">        
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="1">1</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="2">2</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="3">3</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="+">+</button>
-            <button type="button" class="btn btn-danger custom" onClick="clearDisplay()">AC</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="4">4</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="5">5</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="6">6</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="-">-</button>
-            <button type="button" class="btn btn-dark custom" onClick="removeOne()">⌫</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="7">7</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="8">8</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="9">9</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="*">*</button>
-            <button type="button" class="btn btn-dark custom"></button>
-        </div>
-    </div>
-    <div class="row">   
-        <div class="btn-group" role="group">    
-            <button type="button" class="btn btn-dark custom"></button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="0">0</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value=".">.</button>
-            <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="/">/</button>
-            <button type="button" class="btn btn-success custom" onClick="submitForm()">=</button>
-        </div>
-    </div>
-    <?php if(!empty($error)){ ?>
-        <script type="text/javascript">
-            alert("<?php echo $error ?>");
-        </script>
-    <?php } ?>
-</div>
-</form>
 
+        <div class="row">
+            <div class="divdisplay" id="divdisplay">
+                <input type="text" class="calc-display" value="<?php echo $ergebnis ?>" name="display" id="display" readonly>
+            </div> 
+        </div>
+
+        <div class="row">        
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="1">1</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="2">2</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="3">3</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="+">+</button>
+                <button type="button" class="btn btn-danger custom" onClick="clearDisplay()">AC</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="4">4</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="5">5</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="6">6</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="-">-</button>
+                <button type="button" class="btn btn-dark custom" onClick="removeOne()">⌫</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="7">7</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="8">8</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="9">9</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="*">*</button>
+                <button type="button" class="btn btn-dark custom"></button>
+            </div>
+        </div>
+
+        <div class="row">   
+            <div class="btn-group" role="group">    
+                <button type="button" class="btn btn-dark custom"></button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="0">0</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value=".">.</button>
+                <button type="button" class="btn btn-dark custom" onClick="updateDisplay(this.value)" value="/">/</button>
+                <button type="button" class="btn btn-success custom" onClick="submitForm()">=</button>
+            </div>
+        </div>
+
+        <?php if(!empty($error)){ ?>
+            <script type="text/javascript">
+                alert("<?php echo $error ?>");
+            </script>
+        <?php } ?>
+
+    </div>
+    </form>
 </body>
 </html>

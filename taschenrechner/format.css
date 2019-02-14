@@ -1,15 +1,14 @@
-.button1{
+.button1 {
     font-size: 20;
     width: 65px;
     height: 40px;
     background-color: #454545;
     color: white;
     border-style: none;
-    border-radius: 10%;
-    
+    border-radius: 10%;    
 }
 
-.buttonequals{
+.buttonequals {
     font-size: 20;
     width: 65px;
     height: 40px;
@@ -18,25 +17,26 @@
     border: none;
     border-radius: 10%;
     text-align: center;
-    
 }
-.background{
+
+.background {
     background-color: #383838;
     width: 347px;
     height: 183px;
-
 }
-.divdisplay{
+
+.divdisplay {
     background-color: rgb(46, 51, 56);
     width: 347px;
     height: 83px; 
 }
-.divhistory{
+
+.divhistory {
     background-color: rgb(46, 51, 56);
     width: 347px;
-
 }
-.calc-display{
+
+.calc-display {
     width: 100%;
     font-size: 4rem;
     height: 68px;
@@ -47,7 +47,8 @@
     padding-right: 20px;
     padding-left: 10px;    
 }
-.history-display{
+
+.history-display {
     width: 100%;
     font-size: 1.5rem;
     height: 25px;
@@ -59,13 +60,15 @@
     padding-left: 10px;   
     opacity: 0.7;
 }
-.loesungen{
+
+.loesungen {
     background-color: #383838;
     width: 347px;
     height: 160px; 
     cursor: move;
 }
-table.keyboard td{
+
+table.keyboard td {
     font-size: 20;
     width: 65px;
     height: 40px;
@@ -74,7 +77,6 @@ table.keyboard td{
     border-style: none;
     border-radius: 10%;
     text-align: center;
-
 }
 
 .custom {
@@ -82,7 +84,6 @@ table.keyboard td{
     height: 50px;
     border-radius: 0%;
 }
-
 
 .center {
     position: fixed;
@@ -92,30 +93,30 @@ table.keyboard td{
     margin-left: -174px;
 }
 
-.focus{
+.focus {
     cursor: pointer;
 }
-.focus:hover{
+.focus:hover {
     background-color: rgb(56, 61, 66); 
 }
 
-.customalert{
+.customalert {
     width: 347px;
 }
 
-.positionfixed{
+.positionfixed {
     position: fixed;    
 }
 
-.border{
+.border {
     border-style: solid;
     border-color: rgb(46, 51, 56) !important;
     border-width: 15px !important;
     box-shadow: 15px 15px;
     width: 377px;
-    
 }
-.hideOverflow{
+
+.hideOverflow {
     overflow: hidden;
 }
 

@@ -8,7 +8,7 @@ $error = '';
 $allowed = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/', '.'];
 
 
-if(!empty($_SESSION["history"])){
+if(!empty($_SESSION["history"])) {
     $history = $_SESSION["history"];
 }
 
@@ -30,7 +30,6 @@ try {
     return;
 }
 
-
 $history[] = [
     'rechnung' => $rechnung,
     'ergebnis' => $ergebnis,
@@ -39,7 +38,5 @@ $history[] = [
 $history = array_splice($history, -3);
 
 $_SESSION["history"] = $history;
-
-// var_dump($history);
 
 ?>

@@ -1,27 +1,24 @@
-function updateDisplay(newDisplay){  
+function updateDisplay(newDisplay) {  
     document.getElementById("display").value += newDisplay;
 }
 
-function clearDisplay(){  
+function clearDisplay() {  
     document.getElementById("display").value = "";
     
 }
 
-function submitForm(){
+function submitForm() {
     
     document.getElementById("rechner").submit();
     
 }
 
-function removeOne()
-{
+function removeOne() {
     var strng=document.getElementById("display").value;
     document.getElementById("display").value=strng.substring(0,strng.length-1)
 }
 
-
-
-function enableEdit(){
+function enableEdit() {
     if(document.getElementById("display").readOnly = false){
         document.getElementById("display").readOnly = true;
     } else {
@@ -29,7 +26,7 @@ function enableEdit(){
     }
 }
 
-function alert(fehlermeldung){
+function alert(fehlermeldung) {
     $.notify({
         title: fehlermeldung,
         message: 'Bitte überprüfe deine Eingabe.',
@@ -62,7 +59,6 @@ function alert(fehlermeldung){
         '</div>' 
     });
 }
-
 
 window.addEventListener('keydown', function (e) {
     if (e.keyCode == 96 || e.keyCode == 48) {
